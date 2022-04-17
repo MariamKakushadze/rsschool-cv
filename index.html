@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mariam Kakushadze</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+
+  <body id="bodyX">
+    <header class="row g-0 header">
+        <section class="col-3 section-1">
+            <h2 class="hidden">Profile picture</h2>
+            <img id="header-picture" class="img-thumbnail" src="Mariam.jpg" alt="Mariam Kakushadze pic">
+        </section>
+        
+        <section class="col-9 g-0 section-2">
+            <h1 class="row g-0 header-container">Mariam Kakushadze</h1>
+            <nav class="row g-0 header-navigation">
+                <a href="#summary">Summary</a>
+                <a href="#education">Education</a>
+                <a href="#language">Language</a>
+                <a href="#experience">Work Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#code-example">Code Example</a>
+                <a href="#project">Project</a>
+                   
+            </nav>
+        </section>    
+    </header>
+    <main class="row g-0 main-container">
+        
+        <aside class="col-3 g-0 aside-container">
+            <nav>
+                <h2 class="contacts-list">Contacts</h2>
+                <ul class="contacts">
+                <li>Location: Tbilisi, Georgia </li>
+                <li>mariam.kakushadze3@gmail.com</li>
+                <li><a href="https://github.com/Mariamkakushadze" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/mariami-kakushadze/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                </ul>
+
+                <h2 id="skills">Skills</h2>
+                <ul class="skills">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Git</li>
+                  <li>GitHub</li>
+                    
+                </ul>
+            </nav>
+            
+        </aside>
+        <section class="col-9 g-0 right-container">
+            <h2 class="hidden">Main content</h2>
+            <section class="summary">
+                <h2 id="summary">Summary</h2>
+                <p>
+                  I'm Mariam Kakushadze, nowadays I'm working in Georgia Revenue Service but I see my
+                  future in front end development. I'm studying HTML,CSS,JS anddoing my best to become
+                   good developer.
+                </p>
+            </section>
+            <section class="education">
+                <h2 id="education">Education</h2>
+                <ul>
+                    <li>RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)</li>
+                    <li>2016-18 Master of Public relations  - Georgian Institute of Public Affairs, Tbilisi, Georgia</li>
+                    <li>2012-16 Bachelor of Social Sciences - Akaki tsereteli State University, Kutasi, Georgia</li>
+                </ul>
+            </section>
+
+            <section class="language">
+                <h2 id="language">Language</h2>
+                <ul>
+                    <li>Georgian: Native</li>
+                    <li>English - C1 (according to the online test at 
+                        <a href="https://www.efset.org/cert/vM59vS"><u>www.efset.org</u></a>)<br>
+                        <img src="level.png" alt="English  Level photo" width="150" />
+                    </li>
+                    <li>Russian: Basic</li>
+                </ul>
+            </section>
+
+            <section class="experience">
+                <h2 id="experience">Work Experience</h2>
+                <p> Customs officer at Georgia Revenue Service from 2017.</p>
+           </section>  
+
+            <section class="code-example">
+                <h2 id="code-example">Code Example</h2>
+                <details>
+                <summary> Target </summary>
+                <pre>
+                    <code>
+                      // This program draws a target that follows the mouse
+                      var line;
+                      var line2;
+                      function start(){
+                          var x=0;
+                          var y=(getHeight()/2);
+                          var x1=getWidth();
+                          var M = getWidth()/2;
+                          var N=0;
+                          var y1=getHeight();
+                          line=new Line(x,y,x1,y);
+                          line2=new Line(M,N,M,y1);
+                          add(line2);
+                          add(line);
+                          mouseMoveMethod(cross);
+                          mouseClickMethod(dot);
+                      }
+                      function dot(e){
+                          var circle=new Circle(10);
+                          circle.setPosition(e.getX(), e.getY());
+                          circle.setColor(Color.red);
+                          add(circle);
+                      }
+                      function cross(e){
+                          line.setPosition(e.getX(),0);
+                          line.setEndpoint(e.getX(),getHeight());
+                          line2.setPosition(0,e.getY());
+                          line2.setEndpoint(getWidth(),e.getY());
+                      }
+                    </code>
+                </pre>
+                </details>
+            </section>
+
+            <section class= "project">
+                <h2 id="project">Project</h2>
+                <ul>
+                 <li><a href="https://codehs.com/share/id/breakout-sDH2vy/run" target="_blank">Run Game</a></li>
+             </ul>
+            </section> 
+        </section>
+    </main>
+    <footer class="footer-container">
+        
+        <a href="https://github.com/MariamKakushadze" target="_blank">
+            <img class="footer-logo-github" src="GT.png" alt="GitHub-Mark">
+          </a>
+        <p><a href="https://app.rs.school/profile#view" target="_blank">Mariam Kakushadze</a><br>
+            <time id="footer-date" datetime="2022-04">© April,2022</time>
+        </p>
+        
+
+        <a href="https://rs.school/js-en/" target="_blank">
+            <img class="footer-logo-rs" src="RS.png" alt="rs_school_js">
+          </a>
+    </footer>
+</body>
+</html>
